@@ -1,0 +1,19 @@
+<h3 class="mb-5">Listado de productos</h3>
+{{#if productos.length}}
+  <div class="productos-list mb-5">
+    {{#each productos}}
+      <div class="card" style="width: 100%;">
+        <img src="https://picsum.photos/id/{{this.foto}}/200/150" class="card-img-top" alt={{this.nombre}} />
+        <div class="card-body">
+          <h5 class="card-title mb-0">{{this.nombre}}</h5>
+          <p class="card-text small mb-2">
+          <p class="card-text text-success"><strong>$ {{this.precio}}</strong></p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{else}}
+	<div class="alert alert-danger mb-5">
+		<strong>No hay productos en el listado.</strong>
+	</div>
+{{/if}}
